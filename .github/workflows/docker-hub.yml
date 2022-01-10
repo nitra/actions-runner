@@ -1,4 +1,4 @@
-name: build-caps
+name: build-image
 on:
   push:
     branches:
@@ -9,8 +9,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-caps:
-    name: build-caps
+  build-image:
+    name: build-image
     runs-on: ubuntu-latest
 
     # Add "id-token" with the intended permissions.
