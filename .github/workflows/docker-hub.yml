@@ -40,24 +40,12 @@ jobs:
           username: vitaliytv
           password: ${{ steps.secrets.outputs.docker-hub }}
 
-      - name: Set up Docker Context for Buildx
-        id: buildx-context
-        run: |
-          docker context create builders
-
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
         with:
           version: latest
           endpoint: builders
-
-      # - name: Configure Docker
-      #   run: gcloud auth configure-docker europe-north1-docker.pkg.dev --quiet
-
-      # Qemu, так как без нее нельзя установить nodejs
-      # - name: Configure Docker
-      #   run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
       - name: build and push amd64
         run: |
