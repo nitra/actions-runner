@@ -22,6 +22,10 @@ RUN sudo apt-get install -y \
     qemu \
     --no-install-recommends 
 
+RUN sudo npm install --global yarn
+
+RUN curl -sL firebase.tools | bash
+
 RUN sudo rm -rf /var/lib/apt/lists/* 
 
-RUN sudo npm install --global yarn
+
