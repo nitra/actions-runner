@@ -3,7 +3,7 @@ FROM summerwind/actions-runner:v2.298.2-ubuntu-20.04
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # webpack 4 - doesn't support node 18
-ENV NODE_OPTIONS=--openssl-legacy-provider
+# ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Install:
 # nodejs18, yarn, google-cloud-sdk
