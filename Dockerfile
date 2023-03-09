@@ -1,4 +1,4 @@
-FROM summerwind/actions-runner:v2.301.1-ubuntu-22.04
+FROM summerwind/actions-runner:v2.302.1-ubuntu-22.04
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -17,6 +17,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - \
 RUN sudo apt-get update -y && \
     sudo apt-get install -y \
     nodejs \
+    build-essential \
     google-cloud-sdk \
     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
     libodbc1 \
