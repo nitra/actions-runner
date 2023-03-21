@@ -1,4 +1,4 @@
-FROM summerwind/actions-runner:v2.302.1-ubuntu-22.04
+FROM summerwind/actions-runner:v2.303.0-ubuntu-20.04
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -14,6 +14,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - \
     && echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - 
 
+# kubectl
+RUN curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg \ \
+    && echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list 
+
 RUN sudo apt-get update -y && \
     sudo apt-get install -y \
     nodejs \
@@ -23,6 +27,7 @@ RUN sudo apt-get update -y && \
     libodbc1 \
     git-lfs \
     qemu \
+    kubectl \
     --no-install-recommends 
 
 RUN sudo npm install --global yarn
