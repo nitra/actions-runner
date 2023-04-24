@@ -31,7 +31,9 @@ RUN sudo apt-get update -y && \
     kubectl \
     --no-install-recommends
 
-RUN sudo npm install --global yarn
+# додаємо depcheck щоб швидше запускався
+RUN sudo npm install --global yarn && \
+    npx depcheck --version
 
 RUN curl -sL firebase.tools | bash
 
