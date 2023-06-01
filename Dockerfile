@@ -2,7 +2,7 @@ FROM summerwind/actions-runner:v2.304.0-ubuntu-22.04
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# webpack 4 - doesn't support node 18
+# webpack 4 - doesn't support node 18.
 # ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # Install:
