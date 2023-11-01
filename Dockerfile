@@ -34,7 +34,7 @@ RUN sudo apt update && \
     qemu \
     kubectl \
     --no-install-recommends && \
-    npm install -g corepack
+    sudo npm install -g corepack
 
 # додаємо depcheck щоб швидше запускався
 RUN sudo npm install --global yarn && \
