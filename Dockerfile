@@ -26,7 +26,6 @@ RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key
 RUN sudo apt update && \
     sudo apt-get install -y \
     nodejs \
-    npm \
     build-essential \
     google-cloud-sdk \
     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
