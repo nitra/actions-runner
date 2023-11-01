@@ -58,5 +58,4 @@ jobs:
           --platform linux/amd64 \
           --tag nitra/actions-runner:latest \
           --tag "nitra/actions-runner:${GITHUB_SHA::8}" \
-          --squash \
           --push
