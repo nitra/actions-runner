@@ -37,8 +37,7 @@ RUN sudo apt update && \
     sudo npm install -g corepack
 
 # додаємо depcheck щоб швидше запускався
-RUN sudo npm install --global yarn && \
-    npx depcheck --version && \
+RUN npx depcheck --version && \
     npx esbuild --version
 
 RUN curl -sL firebase.tools | bash
