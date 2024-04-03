@@ -1,4 +1,4 @@
-FROM summerwind/actions-runner:v2.311.0-ubuntu-22.04
+FROM summerwind/actions-runner:v2.314.1-ubuntu-22.04
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -38,7 +38,8 @@ RUN sudo apt update && \
 
 # додаємо depcheck щоб швидше запускався
 RUN npx depcheck --version && \
-    npx esbuild --version
+    npx esbuild --version && \
+    npx hasura-cli@2.36.2 --version
 
 RUN curl -sL firebase.tools | bash
 
