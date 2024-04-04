@@ -2,6 +2,10 @@ FROM summerwind/actions-runner:v2.314.1-ubuntu-22.04
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Install buildx
+COPY --from=docker/buildx-bin /buildx /usr/libexec/docker/cli-plugins/docker-buildx
+RUN docker buildx install
+
 # webpack 4 - doesn't support node 18.
 # ENV NODE_OPTIONS=--openssl-legacy-provider
 
