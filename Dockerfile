@@ -1,5 +1,7 @@
 FROM summerwind/actions-runner:v2.314.1-ubuntu-22.04
 
+ENV TZ="Europe/Riga"
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install buildx
@@ -29,6 +31,7 @@ RUN sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/rele
 RUN sudo apt update && \
     sudo apt-get install -y \
     nodejs \
+    tzdata \
     build-essential \
     google-cloud-sdk \
     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
