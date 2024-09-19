@@ -43,7 +43,7 @@ RUN sudo apt update && \
     --no-install-recommends
     # && \
 #     sudo npm install -g corepack
-
+RUN gcloud components install kubectl docker-credential-gcr
 # # додаємо depcheck щоб швидше запускався
 # RUN npx depcheck --version && \
 #     npx esbuild --version && \
