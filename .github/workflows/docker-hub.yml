@@ -19,11 +19,11 @@ jobs:
       id-token: "write"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - id: "auth"
         name: "Authenticate to Google Cloud"
-        uses: "google-github-actions/auth@v0"
+        uses: "google-github-actions/auth@v2"
         with:
           workload_identity_provider: "projects/753698311885/locations/global/workloadIdentityPools/github-pool/providers/github-provider"
           service_account: "github-service-account@nitraai.iam.gserviceaccount.com"
@@ -35,7 +35,7 @@ jobs:
             docker-hub:nitraai/docker-hub
 
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           username: vitaliytv
           password: ${{ steps.secrets.outputs.docker-hub }}
