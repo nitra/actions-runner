@@ -24,10 +24,6 @@ RUN sudo apt update && sudo apt install -y apt-transport-https ca-certificates c
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add -&& curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add -
 
-# # kubectl
-# RUN sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
-#     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-
 RUN sudo apt update && \
     sudo apt-get install -y \
 #     nodejs \
@@ -56,3 +52,5 @@ RUN sudo apt update && \
 # RUN curl -sL firebase.tools | bash
 
 RUN sudo rm -rf /var/lib/apt/lists/*
+
+RUN gcloud auth configure-docker europe-west4-docker.pkg.dev,europe-north1-docker.pkg.dev
