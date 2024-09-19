@@ -32,14 +32,14 @@ RUN sudo apt update && \
     google-cloud-sdk \
     kubectl \
     google-cloud-cli-docker-credential-gcr \
-
+    --no-install-recommends
 #     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
 #     libodbc1 \
 #     git-lfs \
 #     # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 #     google-cloud-sdk-gke-gcloud-auth-plugin \
 #     qemu \
-    --no-install-recommends
+
 
     # && \
 #     sudo npm install -g corepack
@@ -53,4 +53,5 @@ RUN sudo apt update && \
 
 RUN sudo rm -rf /var/lib/apt/lists/*
 
-RUN gcloud auth configure-docker europe-west4-docker.pkg.dev,europe-north1-docker.pkg.dev
+# RUN gcloud auth configure-docker europe-west4-docker.pkg.dev,europe-north1-docker.pkg.dev
+COPY prepare-gcloud.sh ./
