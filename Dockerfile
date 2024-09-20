@@ -26,7 +26,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 
 RUN sudo apt update && \
     sudo apt-get install -y \
-#     nodejs \
+    nodejs \
     tzdata \
 #     build-essential \
     google-cloud-sdk \
@@ -44,10 +44,10 @@ RUN sudo apt update && \
     # && \
 #     sudo npm install -g corepack
 
-# # додаємо depcheck щоб швидше запускався
-# RUN npx depcheck --version && \
-#     npx esbuild --version && \
-#     npx hasura-cli@2.36.2 version
+# додаємо depcheck щоб швидше запускався
+RUN npx depcheck --version && \
+    # npx esbuild --version && \
+    npx hasura-cli@2.36.2 version
 
 # RUN curl -sL firebase.tools | bash
 
