@@ -42,13 +42,14 @@ RUN sudo apt update && \
 #     qemu \
 
 
-    # && \
-#     sudo npm install -g corepack
+    && \
+    sudo npm install -g corepack
 
-# додаємо depcheck щоб швидше запускався
-RUN npx depcheck --version && \
-    # npx esbuild --version && \
-    npx hasura-cli@2.36.2 version
+RUN node --version && npm --version
+# # додаємо depcheck щоб швидше запускався
+# RUN npx depcheck --version && \
+#     # npx esbuild --version && \
+#     npx hasura-cli@2.36.2 version
 
 # RUN curl -sL firebase.tools | bash
 
