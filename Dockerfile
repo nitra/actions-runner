@@ -42,8 +42,8 @@ RUN sudo apt update && \
 #     qemu \
 
 
-    && \
-    sudo npm install -g corepack
+    # && \
+RUN sudo npm install -g corepack
 
 RUN node --version && npm --version
 # # додаємо depcheck щоб швидше запускався
