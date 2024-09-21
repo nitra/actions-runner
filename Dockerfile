@@ -13,9 +13,9 @@ ENV TZ="Europe/Riga"
 
 RUN sudo apt update && sudo apt install -y apt-transport-https ca-certificates curl gnupg
 
-# Node 20
+# Node 22
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 # # Install:
 # # yarn, google-cloud-sdk
