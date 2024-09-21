@@ -51,7 +51,7 @@ RUN npx depcheck --version && \
     # npx esbuild --version && \
     npx hasura-cli@2.36.2 version
 
-# RUN curl -sL firebase.tools | bash
+RUN curl -sL firebase.tools | bash
 
 RUN sudo rm -rf /var/lib/apt/lists/*
 
