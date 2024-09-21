@@ -33,7 +33,6 @@ RUN sudo apt update && \
 #     build-essential \
     google-cloud-sdk \
     kubectl \
-    google-cloud-cli-docker-credential-gcr \
     --no-install-recommends
 #     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
 #     libodbc1 \
