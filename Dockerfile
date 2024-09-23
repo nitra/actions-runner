@@ -28,6 +28,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 RUN sudo apt update && \
     sudo apt-get install -y \
     nodejs \
+    zip \
     # npm \
     tzdata \
 #     build-essential \
