@@ -1,6 +1,9 @@
 name: build-image
 on:
   push:
+    paths:
+      - "Dockerfile"
+      - "prepare-gcloud.sh"
     branches:
       - main
 

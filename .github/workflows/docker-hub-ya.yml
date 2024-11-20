@@ -1,6 +1,9 @@
 name: build-image-ya
 on:
   push:
+    paths:
+      - "ya.Dockerfile"
+      - "init-ya.sh"
     branches:
       - main
 
