@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - "ya.Dockerfile"
-      - "init-ya.sh"
+      - "prepare-ya.sh"
     branches:
       - main
 

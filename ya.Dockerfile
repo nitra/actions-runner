@@ -38,5 +38,4 @@ RUN npx depcheck --version && \
 
 RUN sudo rm -rf /var/lib/apt/lists/*
 
-# COPY init-ya.sh ./
 COPY prepare-ya.sh ./
