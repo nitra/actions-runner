@@ -17,6 +17,8 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 
 # YC
 RUN curl -sSL https://storage.yandexcloud.net/yandexcloud-yc/install.sh | bash
+RUN sudo ln -s /home/runner/yandex-cloud/bin/docker-credential-yc /usr/local/bin/docker-credential-yc
+RUN sudo ln -s /home/runner/yandex-cloud/bin/yc /usr/local/bin/yc
 
 # # Install:
 RUN sudo apt update && \
@@ -36,5 +38,5 @@ RUN npx depcheck --version && \
 
 RUN sudo rm -rf /var/lib/apt/lists/*
 
-COPY init-ya.sh ./
+# COPY init-ya.sh ./
 COPY prepare-ya.sh ./
