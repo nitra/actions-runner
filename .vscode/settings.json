@@ -1,3 +1,22 @@
 {
-  "cSpell.words": ["acvdg", "corepack", "esbuild", "libodbc"]
+  "cSpell.words": [
+    "acvdg",
+    "bitnami",
+    "buildx",
+    "corepack",
+    "dearmor",
+    "esbuild",
+    "libexec",
+    "libgbm",
+    "libgconf",
+    "libnotify",
+    "libnss",
+    "libodbc",
+    "libxss",
+    "libxtst",
+    "nodesource",
+    "nodistro",
+    "tzdata",
+    "xauth"
+  ]
 }

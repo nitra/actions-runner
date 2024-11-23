@@ -6,4 +6,4 @@
 /home/runner/yandex-cloud/bin/yc config set folder-id b1gh9adr678gi95acvdg
 /home/runner/yandex-cloud/bin/yc container registry configure-docker
 
-cp -r -v /home/runner/externals/. /home/runner/tmpDir/
+/home/runner/run.sh
