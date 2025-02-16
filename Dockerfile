@@ -27,19 +27,20 @@ RUN sudo apt update && \
     zip \
     # npm \
     tzdata \
-#     build-essential \
+    #     build-essential \
     google-cloud-sdk \
+    google-cloud-sdk-gke-gcloud-auth-plugin \
     kubectl \
     --no-install-recommends
 #     libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb \
 #     libodbc1 \
 #     git-lfs \
 #     # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
-#     google-cloud-sdk-gke-gcloud-auth-plugin \
+
 #     qemu \
 
 
-    # && \
+# && \
 RUN sudo npm install -g corepack
 
 # RUN node --version && npm --version
