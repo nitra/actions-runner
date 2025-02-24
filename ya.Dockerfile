@@ -33,6 +33,8 @@ RUN sudo npm install -g corepack
 # RUN node --version && npm --version
 # додаємо depcheck щоб швидше запускався
 RUN npx depcheck --version && \
+    npx eslint --version && \
+    npx oxlint --version && \
     # npx esbuild --version && \
     npx hasura-cli@2.36.2 version
 
