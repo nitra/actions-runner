@@ -45,9 +45,10 @@ RUN sudo npm install -g corepack
 
 # RUN node --version && npm --version
 # додаємо depcheck щоб швидше запускався
-RUN npx depcheck --version && \
-    # npx esbuild --version && \
-    npx hasura-cli@2.36.2 version
+RUN npx -y depcheck --version && \
+    npx -y oxlint --version && \
+    npx -y eslint --version && \
+    npx -y hasura-cli@2.36.2 version
 
 RUN curl -sL firebase.tools | bash
 
