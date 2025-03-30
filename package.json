@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "ya-build": "docker build -t t1  -f ya.Dockerfile ."
+    "build": "docker build -t t1 -f Dockerfile ."
   }
 }
