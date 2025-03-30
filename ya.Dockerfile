@@ -19,7 +19,7 @@ RUN curl -sSL https://storage.yandexcloud.net/yandexcloud-yc/install.sh | bash
 RUN sudo ln -s /home/runner/yandex-cloud/bin/docker-credential-yc /usr/local/bin/docker-credential-yc
 RUN sudo ln -s /home/runner/yandex-cloud/bin/yc /usr/local/bin/yc
 
-# # Install:
+# Install:
 RUN sudo apt update && \
     sudo apt-get install -y \
     nodejs \

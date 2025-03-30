@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  NAME: actions-runner-ya
+  NAME: actions-runner
   REGISTRY: "cr.yandex/crpaerfcq9t16fse5onm"
 
 concurrency:
@@ -31,8 +31,9 @@ jobs:
           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
 
       - name: build
-        working-directory: run/nexus
         run: >-
           docker build
           --push
+          -f ya.Dockerfile .
+          --platform linux/amd64
           -t "${{ env.IMAGE }}" -t ${IMAGE%:*}:latest .
