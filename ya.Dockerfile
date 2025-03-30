@@ -1,6 +1,5 @@
 FROM bitnami/kubectl AS kubectl
 
-
 FROM ghcr.io/actions/actions-runner:latest
 
 ENV TZ="Europe/Riga"
