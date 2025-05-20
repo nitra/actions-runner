@@ -37,8 +37,6 @@ RUN sudo apt update && \
 #     git-lfs \
 #     # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 
-#     qemu \
-
 
 # && \
 RUN sudo npm install -g corepack
