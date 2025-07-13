@@ -7,3 +7,5 @@ yc config set folder-id b1gh9adr678gi95acvdg
 yc container registry configure-docker
 
 /home/runner/run.sh
+
+#
