@@ -41,7 +41,8 @@ RUN sudo apt update && \
 
 
 # && \
-RUN sudo npm install -g corepack
+RUN sudo npm install -g corepack && \
+    npm install -g bun
 
 # RUN node --version && npm --version
 # додаємо depcheck щоб швидше запускався
