@@ -27,7 +27,8 @@ RUN sudo apt update && \
     tzdata \
     --no-install-recommends
 
-RUN sudo npm install -g corepack
+RUN sudo npm install -g corepack && \
+   npm install -g bun
 
 # RUN node --version && npm --version
 # додаємо depcheck щоб швидше запускався
