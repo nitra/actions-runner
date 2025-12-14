@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:latest
+FROM ghcr.io/actions/actions-runner:2.330.0
 
 ENV TZ="Europe/Riga"
 
