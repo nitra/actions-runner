@@ -6,7 +6,10 @@
     "corepack",
     "crpaerfcq",
     "dearmor",
+    "depcheck",
     "esbuild",
+    "keyrings",
+    "libasound",
     "libexec",
     "libgbm",
     "libgconf",
@@ -17,7 +20,14 @@
     "libxtst",
     "nodesource",
     "nodistro",
+    "oxlint",
+    "pipefail",
     "tzdata",
-    "xauth"
+    "xauth",
+    "додаємо",
+    "запускався",
+    "кипра",
+    "пакета",
+    "швидше"
   ]
 }
