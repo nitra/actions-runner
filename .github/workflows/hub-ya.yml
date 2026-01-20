@@ -6,6 +6,11 @@ on:
       - "prepare-ya.sh"
     branches:
       - main
+  schedule:
+    # Запускається автоматично 1-го та 15-го числа кожного місяця о 00:00 UTC
+    - cron: "0 0 1,15 * *"
+
+  workflow_dispatch:
 
 env:
   NAME: actions-runner

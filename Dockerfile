@@ -1,4 +1,5 @@
-FROM ghcr.io/actions/actions-runner:2.330.0
+FROM ghcr.io/actions/actions-runner:latest
+# FROM ghcr.io/actions/actions-runner:2.330.0
 
 ENV TZ="Europe/Riga"
 
@@ -41,7 +42,7 @@ RUN sudo apt update && \
 
 
 # && \
-RUN sudo npm install -g corepack 
+RUN sudo npm install -g corepack
 RUN curl -fsSL https://bun.com/install | bash
 
 # RUN node --version && npm --version
